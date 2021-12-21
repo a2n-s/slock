@@ -12,7 +12,7 @@ Patches have been patched with `patch -p1 < ./path/to/patch`.
 |   | [blur-pixelated-screen]     |                                            |
 | x | [capscolor]                 | [slock-capscolor-20170106-2d2a21a.diff]    |
 | x | [colormessage]              | [slock-colormessage-20200210-35633d4.diff] |
-|   | [control-clear]             | [slock-git-20161012-control-clear.diff]    |
+| x | [control-clear]             | [slock-git-20161012-control-clear.diff]    |
 |   | [dpms]                      | [slock-dpms-1.4.diff]                      |
 |   | [dwmlogo]                   |                                            |
 |   | [failure-command]           | [slock-failure-command-1.4.diff]           |
