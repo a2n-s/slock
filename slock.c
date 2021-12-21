@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 #include <sys/types.h>
 #include <X11/extensions/Xrandr.h>
 #include <X11/extensions/Xinerama.h>
@@ -26,6 +27,7 @@
 
 char *argv0;
 int failtrack = 0;
+static time_t tim;
 
 /* global count to prevent repeated error messages */
 int count_error = 0;
@@ -278,6 +280,7 @@ readpw(Display *dpy, struct xrandr *rr, struct lock **locks, int nscreens,
 		caps = indicators & 1;
 
 	while (running && !XNextEvent(dpy, &ev)) {
+                running = !((time(NULL) - tim < timetocancel) && (ev.type == MotionNotify));
 		if (ev.type == KeyPress) {
 			explicit_bzero(&buf, sizeof(buf));
 			num = XLookupString(&ev.xkey, buf, sizeof(buf), &ksym, 0);
@@ -423,6 +426,7 @@ lockscreen(Display *dpy, struct xrandr *rr, int screen)
 				XRRSelectInput(dpy, lock->win, RRScreenChangeNotifyMask);
 
 			XSelectInput(dpy, lock->root, SubstructureNotifyMask);
+      tim = time(NULL);
 			return lock;
 		}
 

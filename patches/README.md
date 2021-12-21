@@ -13,15 +13,15 @@ Patches have been patched with `patch -p1 < ./path/to/patch`.
 | x | [capscolor]                 | [slock-capscolor-20170106-2d2a21a.diff]    |
 | x | [colormessage]              | [slock-colormessage-20200210-35633d4.diff] |
 | x | [control-clear]             | [slock-git-20161012-control-clear.diff]    |
-|   | [dpms]                      | [slock-dpms-1.4.diff]                      |
+| x | [dpms]                      | [slock-dpms-1.4.diff]                      |
 |   | [dwmlogo]                   |                                            |
-|   | [failure-command]           | [slock-failure-command-1.4.diff]           |
+| x | [failure-command]           | [slock-failure-command-1.4.diff]           |
 |   | [foreground-and-background] |                                            |
 |   | [foreground-image]          |                                            |
 |   | [mediakeys]                 |                                            |
 |   | [message]                   |                                            |
 |   | [pam-auth]                  |                                            |
-|   | [quickcancel]               | [slock-quickcancel-20160619-65b8d52.diff]  |
+| ~ | [quickcancel]               | [slock-quickcancel-20160619-65b8d52.diff]  |
 |   | [secret-password]           | [slock-secret-password-1.4.diff]           |
 |   | [terminalkeys]              | [slock-terminalkeys-1.4.diff]              |
 |   | [unlock-screen]             |                                            |
