@@ -10,8 +10,8 @@ Patches have been patched with `patch -p1 < ./path/to/patch`.
 |---|-----------------------------|--------------------------------------------|
 |   | [auto-timeout]              | [slock-auto-timeout.1.4.diff]              |
 |   | [blur-pixelated-screen]     |                                            |
-|   | [capscolor]                 | [slock-capscolor-20170106-2d2a21a.diff]    |
-|   | [colormessage]              | [slock-colormessage-20200210-35633d4.diff] |
+| x | [capscolor]                 | [slock-capscolor-20170106-2d2a21a.diff]    |
+| x | [colormessage]              | [slock-colormessage-20200210-35633d4.diff] |
 |   | [control-clear]             | [slock-git-20161012-control-clear.diff]    |
 |   | [dpms]                      | [slock-dpms-1.4.diff]                      |
 |   | [dwmlogo]                   |                                            |
