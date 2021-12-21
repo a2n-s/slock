@@ -4,13 +4,20 @@ static const char *group = "nobody";
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#005577",   /* during input */
+	[INPUT] =  "#002233",   /* during input */
 	[FAILED] = "#CC3333",   /* wrong password */
 	[CAPS] = "red",         /* CapsLock on */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
+
+/* number of failed password attempts until failcommand is executed.
+   Set to 0 to disable */
+static const int failcount = 3;
+
+/* command to be executed after [failcount] failed password attempts */
+static const char *failcommand = "echo 'such a noob!'";
 
 /* allow control key to trigger fail on clear */
 static const int controlkeyclear = 1;
